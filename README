@@ -7,6 +7,12 @@ Requirements
 ------------
 In order to build st you need the Xlib header files.
 
+I needed:
+
+* libfontconfig1-dev
+* libx11-dev
+* libxft-dev
+
 
 Installation
 ------------
