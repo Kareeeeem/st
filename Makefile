@@ -38,7 +38,7 @@ dist: clean
 	tar -cf - st-$(VERSION) | gzip > st-$(VERSION).tar.gz
 	rm -rf st-$(VERSION)
 
-install: st open-url xurls
+install: st
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp -f st $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/st
@@ -48,17 +48,8 @@ install: st open-url xurls
 	tic -sx st.info
 	@echo Please see the README file regarding the terminfo entry of st.
 
-	@echo installing external scripts and binaries
-	@cp -f open-url ${DESTDIR}${PREFIX}/bin
-	@cp -f xurls ${DESTDIR}${PREFIX}/bin
-
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
-
-	@echo removing external scripts and binaries
-	@rm -f ${DESTDIR}${PREFIX}/bin/xurls
-	@rm -f ${DESTDIR}${PREFIX}/bin/open-url
-
 
 .PHONY: all options clean dist install uninstall
