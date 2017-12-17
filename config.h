@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+char font[] = "DejaVu Sans Mono:pixelsize=12:antialias=true:autohint=true";
 int borderpx = 2;
 
 /*
@@ -130,6 +130,7 @@ const char *colorname[] = {
 	"#cccccc",
 	"#555555",
 	"#262626",
+	"Grey85",
 };
 
 
@@ -137,9 +138,9 @@ const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
+unsigned int defaultfg = 259;
 unsigned int defaultbg = 258;
-unsigned int defaultcs = 15;
+unsigned int defaultcs = 259;
 unsigned int defaultrcs = 258;
 
 /*
